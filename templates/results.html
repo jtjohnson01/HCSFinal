@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="static/results.css">
+</head>
+
+<body>
+    <div class="verticalcontainer">
+
+    <div class="horizontalcontainer">
+        <p>{{ translation|safe }}</p>
+    </div>
+
+    <div class="horizontalcontainer">
+        <div id="graph1"></div>
+        <script>
+            var graphJSON1 = '{{ graphJSON1 | safe }}';
+            Plotly.newPlot('graph1', JSON.parse(graphJSON1));
+        </script>
+
+        <div id="graph2"></div>
+        <script>
+            var graphJSON2 = '{{ graphJSON2 | safe }}';
+            Plotly.newPlot('graph2', JSON.parse(graphJSON2));
+        </script>
+   
+        <div id="graph3"></div>
+        <script>
+            var graphJSON3 = '{{ graphJSON3 | safe }}';
+            Plotly.newPlot('graph3', JSON.parse(graphJSON3));
+        </script>
+     </div>
+
+    <div class="horizontalcontainer">
+
+    <div id="graph4"></div>
+    <script>
+        var graphJSON3 = '{{ graphJSON4 | safe }}';
+        Plotly.newPlot('graph4', JSON.parse(graphJSON3));
+    </script>
+
+    <div id="graph5"></div>
+    <script>
+        var graphJSON3 = '{{ graphJSON5 | safe }}';
+        Plotly.newPlot('graph5', JSON.parse(graphJSON3));
+    </script>
+
+    </div>
+
+    </div>
+</body>
+
+</html>
