@@ -19,7 +19,8 @@ credentials = service_account.Credentials.from_service_account_info(credentials_
 translate_client = translate.Client(credentials=credentials)
 
 def english_to_chinese(word):
-    client = translate.Client()
-    result = client.translate(word, target_language='zh-CN')
+    #client = translate.Client()
+    #result = client.translate(word, target_language='zh-CN')
+    result = translate_client.translate(word, target_language='zh-CN')
 
     return result['translatedText']
